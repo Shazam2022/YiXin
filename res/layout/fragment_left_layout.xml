@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/tools_box_bg"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dip"
+            android:adjustViewBounds="true"
+            android:maxHeight="80dip"
+            android:maxWidth="80dip"
+            android:src="@drawable/head_default_yixin" />
+
+        <TextView
+            android:id="@+id/id_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:text="12345678"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <include
+            android:id="@+id/toolbox_yixin"
+            layout="@layout/toolbox_item_yixin" />
+
+        <include
+            android:id="@+id/toolbox_circle"
+            layout="@layout/toolbox_item_circle" />
+
+        <include
+            android:id="@+id/toolbox_setting"
+            layout="@layout/toolbox_item_setting" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#FF222221"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dip"
+            android:background="@drawable/tools_box_invit_button_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="邀请好友"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

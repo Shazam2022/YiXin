@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dip"
+    android:background="@drawable/toolbox_item_bg_selector"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tool_box_fragment_yixin_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yixin"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"/>
+
+</RelativeLayout>
