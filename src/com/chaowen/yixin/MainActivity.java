@@ -11,7 +11,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 /**
  * Created by Administrator on 2015/9/28.
  */
-public class MainActivity extends SlidingFragmentActivity implements View.OnClickListener{
+public class MainActivity extends SlidingFragmentActivity implements View.OnClickListener {
     ImageButton imageButton_menu;
     SlidingMenu slidingMenu;
     Fragment fragment_main, fragment_menu;
@@ -19,7 +19,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
-        imageButton_menu = (ImageButton)findViewById(R.id.imagebutton_menu);
+        imageButton_menu = (ImageButton) findViewById(R.id.imagebutton_menu);
         imageButton_menu.setOnClickListener(this);
         initSlidingMenu();
     }
@@ -38,8 +38,19 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imagebutton_menu:
+                slidingMenu.showMenu();
+                break;
+            default:
+                break;
 
+        }
     }
 
+    public void switchFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout_fragment, fragment).commit();
+        slidingMenu.showContent();
+    }
 
 }
